@@ -34,7 +34,9 @@ set :scm, :git
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-  set :passenger_restart_with_touch, true
+set :rbenv_type, :user
+set :rbenv_ruby, '2.1.6'
+set :passenger_restart_with_touch, true
 
 namespace :deploy do
 
