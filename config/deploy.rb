@@ -2,13 +2,13 @@
 lock '3.4.0'
 
 set :application, 'demo'
-set :repo_url, 'git@example.com:taufikobet/demo.git'
+set :repo_url, 'git@github.com:taufikobet/demo.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/ubuntu/apps/#{fetch(:application)}'
+set :deploy_to, "/home/ubuntu/apps/demo"
 set :deploy_via, :remote_cache
 
 # Default value for :scm is :git
@@ -37,6 +37,10 @@ set :scm, :git
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.1.6'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+set :rbenv_roles, :all # default value
+
 set :passenger_restart_with_touch, true
 
 namespace :deploy do
