@@ -9,6 +9,7 @@ set :repo_url, 'git@example.com:taufikobet/demo.git'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/ubuntu/apps/#{fetch(:application)}'
+set :deploy_via, :remote_cache
 
 # Default value for :scm is :git
 set :scm, :git

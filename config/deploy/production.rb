@@ -12,7 +12,7 @@ server '52.24.200.167', user: 'ubuntu',
                           keys: %w(~/.ssh/aws.pem),
                           forward_agent: true,
                           auth_methods: %w(publickey)
-  }
+                        }
 
 
 
