@@ -10,7 +10,7 @@ server '52.24.200.167', user: 'ubuntu', roles: %w{app db web}
 
 set :ssh_options, {
   user: 'ubuntu',
-  keys: %w(~/.ssh/aws.pem),
+  # keys: %w(~/.ssh/aws.pem),
   forward_agent: true,
   auth_methods: %w(publickey)
 }
